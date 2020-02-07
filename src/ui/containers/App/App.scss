@@ -1,0 +1,116 @@
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans|Noto+Sans|Ubuntu|Droid+Sans|Google+Sans:400italic,700italic,400,700);
+
+// Variables
+$headerFont: 'Google Sans', 'Roboto', Arial, Helvetica, sans-serif;
+$bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+$primary: #011936;
+$secondary: #465362;
+$light: #F4FFFD;
+$link: #1a4c9c;
+$linkHover: #1c5ec7;
+$linkContrast: #c9deff;
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    background-color: $light;
+    font-family: $bodyFont;
+    font-style: normal;
+    font-weight: 300;
+}
+
+* {
+    font-size: 1em;
+    line-height: 1.714;
+    font-weight: normal;
+    letter-spacing: -0.005em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $primary;
+    font-family: $headerFont;
+    font-weight: 400;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: initial;
+    word-wrap: initial;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    line-height: 1.18182;
+    font-size: 44px;
+    letter-spacing: -0.5px;
+}
+h2 {
+    line-height: 1.25;
+    font-size: 32px;
+    letter-spacing: 0;
+}
+h3 {
+    line-height: 1.36364;
+    font-size: 22px;
+    letter-spacing: 0;
+}
+h4 {
+    line-height: 1.36364;
+    font-size: 22px;
+    letter-spacing: 0;
+}
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+pre, code {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.ADDPNumber {
+    margin-bottom: 0;
+    line-height: 1em;
+}
+
+a:not(.is-isolated) {
+    color: $link;
+    cursor: pointer;
+    text-decoration: none;
+    &:not(.no-underline) {
+        padding-bottom: 1px;
+        border-bottom: 1px solid $link;
+    }
+    &:hover {
+        color: $linkHover;
+    }
+}
+
+.contrast {
+    background-color: $primary;
+    color: $light;
+    &--is-grey {
+        background-color: $secondary;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $light;
+    }
+    a:not(.is-isolated) {
+        color: $light;
+        &:not(.no-underline) {
+            border-bottom: 1px solid $linkContrast;
+        }
+        &:hover {
+            color: $linkContrast;
+        }
+    }
+}

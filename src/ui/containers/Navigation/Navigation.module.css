@@ -1,0 +1,12 @@
+.Container {
+    flex: 1 1 auto;
+    min-width: 200px;
+    padding: 1.5em;
+}
+
+@media screen and (max-width: 500px) {
+    .Container {
+        min-width: auto;
+        width: 100vw;
+    }
+}
